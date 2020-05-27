@@ -1,0 +1,26 @@
+<%= form_for @user do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br><br>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <br><br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <br><br>
+    <%= f.label :height %>
+    <%= f.number_field :height %>
+    <br><br>
+    <%= f.label :weight %>
+    <%= f.number_field :weight %>
+    <br><br>
+    <%= f.label :gender %>
+    <br>
+    M<%= f.radio_button :gender, "M" %>
+    F<%= f.radio_button :gender, "F" %>
+    <br><br>
+    <%= f.label :goal %>
+    <%= f.number_field :goal %>
+    <br><br>
+    <%= f.submit %>
+<%end%>
