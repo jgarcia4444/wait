@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin-top: 10%;
+}
+
+nav>a {
+    color: white;
+    text-decoration: none;
+}
+
+nav>a:active {
+    padding: 2px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: blue;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+nav {
+    background-color: black;
+    padding: 2%;
+}
