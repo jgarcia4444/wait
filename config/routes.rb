@@ -13,5 +13,9 @@ Rails.application.routes.draw do
 
   resources :health_tips
 
+  resources :health_tips, only: [:show] do
+    resources :comments, only: [:index, :show, :new]
+  end
+
   root "welcome#home"
 end
