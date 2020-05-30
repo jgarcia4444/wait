@@ -11,5 +11,7 @@ Rails.application.routes.draw do
 
   resources :weights, only: [:create, :update, :destroy]
 
+  resources :health_tips
+
   root "welcome#home"
 end

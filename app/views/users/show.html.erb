@@ -1,4 +1,6 @@
-<h1>Hello <%= @user.name %></h1>
-<h3># of Weight entries:</h3>
-<p><%= @user.weights.count %></p>
-<%= link_to "Input weight data.", new_user_weight_path(@user.id) %>
+<div class="container text-center">
+    <h1>Hello <%= @user.name %></h1>
+    <h3># of Weight entries:</h3>
+    <p><%= @user.weights.count %></p>
+    <%= link_to "Input weight data.", new_user_weight_path(@user.id) %>
+</div>
