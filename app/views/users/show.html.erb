@@ -1,6 +1,8 @@
 <div class="container text-center">
     <h1>Hello <%= @user.name %></h1>
     <h3># of Weight entries:</h3>
-    <p><%= @user.weights.count %></p>
+    <p><%= @user.weight_entries_count %></p>
+    <h3>Distance from goal</h3>
+    <p><%= @user.difference_from_goal_weight %></p>
     <%= link_to "Input weight data.", new_user_weight_path(@user.id) %>
 </div>
