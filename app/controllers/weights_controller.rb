@@ -1,10 +1,16 @@
 class WeightsController < ApplicationController
     
     def new
-        @weight = Weight.new
+        if params[:user_id]
+            @weight = Weight.new(:user_id => params[:user_id])
+        else
+            @weight = Weight.new
+        end
     end
+
     def create
         @weight = Weight.create(weight_params)
+        redirect_to user_path(@weight.user)
     end
 
 

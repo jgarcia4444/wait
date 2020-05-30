@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
-  resource :users, only: [ :new, :create, :show ]
+  resources :users, only: [ :new, :create, :show ]
 
   get '/login', :to => "session#new"
   post '/login', :to => "session#create"
   post '/logout', :to => "session#logout"
 
-  resource :users do
-    resource :weights
+  resources :users, only: [:show] do
+    resources :weights, only: [:show, :index, :new, :edit]
   end
+
+  resources :weights, only: [:create, :update, :destroy]
 
   root "welcome#home"
 end
