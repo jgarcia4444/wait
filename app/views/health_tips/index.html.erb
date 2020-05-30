@@ -1,0 +1,11 @@
+<div class="container text-center">
+    <h1>Health Tips</h1>
+    
+        <% @health_tips.each do |health_tip| %>
+            <ul>
+                <li>Title: <strong><%=link_to health_tip.title, health_tip_path(health_tip.id) %></strong></li>
+                <li>Category: <%= health_tip.category %></li>
+            </ul>
+        <% end %>
+    
+</div>

@@ -1,17 +1,11 @@
 class HealthTipsController < ApplicationController
+
     def index
         @health_tips = HealthTip.all
     end
+
     def show
+        @health_tip = HealthTip.find(params[:id]) 
     end
-    def new
-    end
-    def create
-    end
-    def edit
-    end
-    def update
-    end
-    def destroy
-    end
+    
 end
