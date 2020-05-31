@@ -1,0 +1,8 @@
+<%= form_tag comment_replies_path(@comment) do %>
+    <%= hidden_field_tag "reply[user_id]", "#{current_user.id}" %>
+    <%= hidden_field_tag "reply[comment_id]", "#{@comment.id}" %>
+    <label for="reply[content]">Content:</label>
+    <%= text_area_tag "reply[content]" %>
+    <br><br>
+    <%= submit_tag "Reply" %>
+<% end %>

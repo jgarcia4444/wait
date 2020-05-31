@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
     def show
-
+        @comment = Comment.find(params[:id])
     end
     def create
         if params[:health_tip_id]

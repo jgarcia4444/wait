@@ -1,6 +1,8 @@
 class User < ApplicationRecord
     has_secure_password
     has_many :weights
+    has_many :comments
+    has_many :replies
 
     def weight_entries_count
         self.weights.count

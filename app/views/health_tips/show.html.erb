@@ -8,17 +8,10 @@
         <div class="comment">
             <h4><%= comment.user.name %></h4>
             <p><%= comment.content %></p>
+            <p><%= pluralize(comment.reply_count, "reply") %></p>
+            <p><%= link_to "Reply to comment", comment_path(comment) %></p>
         </div> 
         <% end %>
-        <%= form_tag health_tip_comments_path(@health_tip) do %>
-            <h3>Comment Form:</h3>
-            <%= hidden_field_tag 'comment[user_id]', "#{current_user.id}" %>
-            <%= hidden_field_tag 'comment[health_tip_id]', "#{@health_tip.id}" %>
-            <label for="comment[content]">Content:</label>
-            <%= text_field_tag "comment[content]" %>
-            <br>
-            <br>
-            <%= submit_tag "Add Comment" %>
-        <% end %>
+        <%= render 'comment_form' %>
     </div>
 </div>
