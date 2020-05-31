@@ -1,8 +1,10 @@
-<h1>Weight Data Input</h1>
-<%= form_for @weight do |f| %>
-    <%= f.hidden_field :user_id %>
-    <%= f.label :weight_input %>
-    <%= f.number_field :weight_input %>
-    <br><br>
-    <%= f.submit %>
-<% end %>
+<div class="container text-center">
+    <h1>Weight Data Input</h1>
+    <%= form_for @weight do |f| %>
+        <%= f.hidden_field :user_id %>
+        <%= f.label :weight_input %>
+        <%= f.number_field :weight_input %>
+        <br><br>
+        <%= f.submit %>
+    <% end %>
+</div>

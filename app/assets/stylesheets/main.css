@@ -1,3 +1,4 @@
+/* Layout Styling */
 body {
     margin: 0;
 }
@@ -9,13 +10,21 @@ main {
 nav>a {
     color: white;
     text-decoration: none;
+    margin-left: 5%;
+}
+
+nav {
+    background-color: black;
+    padding: 2%;
+}
+
+nav>a:hover {
+    text-decoration: underline;
+    color: #ccc;
 }
 
 nav>a:active {
-    padding: 2px;
-    border: 1px solid white;
-    border-radius: 5px;
-    background-color: blue;
+    color: white;
 }
 
 .container {
@@ -27,7 +36,151 @@ nav>a:active {
     text-align: center;
 }
 
-nav {
+footer {
+    position: fixed;
+    bottom: 0px;
     background-color: black;
+    color: white;
+    width: 100%;
+}
+footer>p {
+    padding-left: 2%;
+}
+
+/* Health Tip Show Styling */
+
+.comment-container {
+    width: 70%;
+    margin: 0 auto 10% auto;
+    padding: 3%;
+    background-color:#0e26b1;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+}
+
+.comment-container>form {
+    
+}
+
+.comment {
+    background-color: #98989C;
+    color: black;
+    width: 50%;
+    margin: 4% auto;
     padding: 2%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #000;
+}
+
+.comment>p>a {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+}
+
+.comment>p>a:hover {
+    text-decoration: underline;
+    box-shadow: 0 0 10px #000;
+}
+
+.comment>p>a:active {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+.health-tip-container {
+    width: 70%;
+    margin: 0 auto 5% auto;
+    padding: 3%;
+}
+
+#health-tip-content {
+    margin-top: 10%;
+    text-align: left;
+}
+
+.user-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 3%;
+    background-color:#0e26b1;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+}
+
+.user-container>a {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+}
+
+.user-container>a:hover {
+    text-decoration: underline;
+    box-shadow: 0 0 10px #000;
+}
+
+.user-container>a:active {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+/* Home Styling */
+
+.signup-login-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 3%;
+    background-color:#0e26b1;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+}
+
+.col-2 { 
+    display: inline-block;
+    width: 49%;
+    margin: 2% auto 2% 0.5%;
+}
+
+.col-2>a {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+}
+
+.col-2>a:hover {
+    text-decoration: underline;
+    box-shadow: 0 0 10px #000;
+}
+
+.col-2>a:active {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+.jumbotron {
+    width: 70%;
+    margin: 15% auto;
+}
+
+.jumbotron>h1 {
+    margin-bottom: 10%;
+}
+
+#description {
+    font-family: sans-serif;
+    text-align: left;
 }

@@ -11,12 +11,16 @@
 
   <body>
   <nav>
-    <%= link_to "Home", root_path %>
+    <%= link_to "Home", current_user ? user_path(current_user) : root_path %>
     <%= link_to "Health Tips", health_tips_path %>
     <% if current_user %>
       <%= link_to "Logout", logout_path, :method => :post %>
     <% end %>
+    
   </nav>
     <%= yield %>
+    <footer>
+      <p>&copy; 2020 Jake Garcia</p>
+    </footer>
   </body>
 </html>

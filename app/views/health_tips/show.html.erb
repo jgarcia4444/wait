@@ -1,9 +1,13 @@
 <div class="container text-center">
-    <h1><%= @health_tip.title %></h1>
-    <h3>Category: <%= @health_tip.category %></h3>
-    <p><%= @health_tip.content %></p>
-    <h3><%= pluralize(@health_tip.comments_count, "Comment") %></h3>
+    <div class="health-tip-container">
+        <h1><%= @health_tip.title %></h1>
+        <h3>Category: <%= @health_tip.category %></h3>
+        <p id="health-tip-content"><%= @health_tip.content %></p>
+    </div>
+    
+    
     <div class="comment-container">
+        <h3><%= pluralize(@health_tip.comments_count, "Comment") %></h3>
         <% @health_tip.comments.each do |comment| %>
         <div class="comment">
             <h4><%= comment.user.name %></h4>
