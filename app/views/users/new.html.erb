@@ -2,6 +2,11 @@
 <div class="container text-center">
     <div class="signup-container">
         <h1>Signup Form</h1>
+        <% if @user.errors %>
+            <% @user.errors.each do |error, message| %>
+            <p><%= error.capitalize %>: <%= message %></p>
+            <% end %>
+        <% end %>
         <%= render 'form' %>
     </div>
     

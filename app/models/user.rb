@@ -3,6 +3,17 @@ class User < ApplicationRecord
     has_many :weights
     has_many :comments
     has_many :replies
+    has_many :replies, :through => :comments
+    validates :name, :presence => true
+    validates :email, :presence => true
+    validates :email, :uniqueness => true
+    validates :height, :presence => true
+    validates :height, :numericality => { :greater_than => 0 }
+    validates :weight, :presence => true
+    validates :weight, :numericality => { :greater_than => 0 }
+    validates :gender, :presence => true
+    validates :goal, :presence => true
+    validates :goal, :numericality => { :greater_than => 0 }
 
     def weight_entries_count
         self.weights.count

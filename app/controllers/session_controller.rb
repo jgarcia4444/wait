@@ -5,6 +5,7 @@ class SessionController < ApplicationController
     def create
         if @user = User.find_by( :email => params[:user_login][:email])
             if @user.authenticate(params[:user_login][:password])
+                flash.clear
                 session[:user_id] = @user.id
                 redirect_to user_path(@user)
             else

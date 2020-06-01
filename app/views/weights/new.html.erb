@@ -1,6 +1,11 @@
 <div class="container text-center">
     <div class="weight-input-container">
         <h1>Weight Data Input</h1>
+        <% if @weight.errors %>
+            <% @weight.errors.each do |error_key, message| %>
+                <p><%= error_key.capitalize %>: <%= message %></p>
+            <% end %>
+        <% end %>
         <%= form_for @weight do |f| %>
             <%= f.hidden_field :user_id %>
             <%= f.label :weight_input %>
