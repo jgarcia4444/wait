@@ -11,6 +11,7 @@ class WeightsController < ApplicationController
     def create
         @weight = Weight.create(weight_params)
         if @weight.valid?
+            current_user.update(:weight => params[:weight][:weight_input])
             redirect_to user_path(@weight.user)
         else
             render :new

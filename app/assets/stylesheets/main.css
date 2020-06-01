@@ -274,3 +274,17 @@ input[type="submit"] {
 .field_with_errors {
     border: 2px solid red;
 }
+
+.row {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row>a {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+}

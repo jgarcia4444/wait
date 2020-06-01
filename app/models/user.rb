@@ -16,11 +16,14 @@ class User < ApplicationRecord
         if last_recorded_weight != nil
             last_recorded_weight ? (self.goal - last_recorded_weight.weight_input).abs() : (self.goal - self.weight).abs()
         end
-        
     end
 
     def last_recorded_weight
         self.weights.last
+    end
+
+    def distance_to_goal
+        self.goal && self.weight ? self.goal - self.weight : nil 
     end
 
 end
