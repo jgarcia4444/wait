@@ -16,6 +16,10 @@ nav>a {
 nav {
     background-color: black;
     padding: 2%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 10px #000;
 }
 
 nav>a:hover {
@@ -29,7 +33,7 @@ nav>a:active {
 
 .container {
     width: 80%;
-    margin: 5% auto;
+    margin: 10% auto;
 }
 
 .text-center {
@@ -42,6 +46,7 @@ footer {
     background-color: black;
     color: white;
     width: 100%;
+    box-shadow: 0 0 10px #000;
 }
 footer>p {
     padding-left: 2%;
@@ -49,9 +54,9 @@ footer>p {
 
 /* Health Tip Show Styling */
 
-.comment-container {
+.comment-container, .reply-container {
     width: 70%;
-    margin: 0 auto 10% auto;
+    margin: 0 auto 5% auto;
     padding: 3%;
     background-color:#0e26b1;
     color: white;
@@ -59,11 +64,7 @@ footer>p {
     box-shadow: 0 0 10px #000;
 }
 
-.comment-container>form {
-    
-}
-
-.comment {
+.comment, .reply {
     background-color: #98989C;
     color: black;
     width: 50%;
@@ -103,7 +104,7 @@ footer>p {
     margin-top: 10%;
     text-align: left;
 }
-
+/* User Show Page Styling */
 .user-container {
     width: 70%;
     margin: 0 auto;
@@ -183,4 +184,89 @@ footer>p {
 #description {
     font-family: sans-serif;
     text-align: left;
+}
+
+/* Health Tip Index Styling */
+.health-tips-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 3%;
+    background-color:#0e26b1;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+}
+
+.tip-container {
+    background-color: #98989C;
+    color: black;
+    width: 50%;
+    margin: 4% auto;
+    padding: 5%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #000;
+}
+
+.tip-container>a {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+}
+
+.tip-container>a:hover {
+    text-decoration: underline;
+    box-shadow: 0 0 10px #000;
+}
+
+.tip-container>a:active {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+/* New Weight Styling */
+
+.weight-input-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 3%;
+    background-color:#0e26b1;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+}
+
+input[type="submit"] {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+}
+
+/* Login Styling  */
+.login-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 3%;
+    background-color:#0e26b1;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+}
+
+/* Signup Styling */
+
+.signup-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 3%;
+    background-color:#0e26b1;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
 }

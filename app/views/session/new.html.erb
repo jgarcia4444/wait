@@ -1,12 +1,16 @@
 <div class="container text-center">
-    <h1>Login</h1>
-    <%= form_tag do %>
-        <label for="user_login[email]">Email</label>
-        <%= text_field_tag "user_login[email]" %>
-        <br><br>
-        <label for="user_login[password]">Password</label>
-        <%= password_field_tag "user_login[password]" %>
-        <br><br>
-        <%= submit_tag "Login" %>
-    <% end %>
+    
+    <div class="login-container">
+        <h1>Login</h1>
+        <%= form_tag do %>
+            <label for="user_login[email]">Email</label>
+            <%= text_field_tag "user_login[email]" %>
+            <br><br>
+            <label for="user_login[password]">Password</label>
+            <%= password_field_tag "user_login[password]" %>
+            <br><br>
+            <%= submit_tag "Login" %>
+        <% end %>
+    </div>
+    
 </div>
