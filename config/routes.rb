@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/login', :to => "session#new"
   post '/login', :to => "session#create"
   post '/logout', :to => "session#logout"
+  get '/auth/:provider/callback', to: 'session#create'
 
   resources :users, only: [:show] do
     resources :weights, only: [:show, :index, :new, :edit]
