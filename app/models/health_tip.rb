@@ -8,4 +8,8 @@ class HealthTip < ApplicationRecord
         self.comments.count
     end
 
+    def self.filter(category)
+        self.where(:category => category)
+    end
+
 end

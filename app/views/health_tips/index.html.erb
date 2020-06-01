@@ -1,11 +1,28 @@
 <div class="container text-center">
     <h1>Health Tips</h1>
     
-        <% @health_tips.each do |health_tip| %>
-            <ul>
-                <li>Title: <strong><%=link_to health_tip.title, health_tip_path(health_tip.id) %></strong></li>
-                <li>Category: <%= health_tip.category %></li>
-            </ul>
-        <% end %>
+        
+
+        <div class="health-tips-container">
+            <div class="col-2">
+                <h2>Tips to Lose Weight</h2>
+                <% @lose_weight_tips.each do |tip| %>
+                    <div class="tip-container">
+                        <h3><%= tip.title %></h3>
+                        <%= link_to "See Health Tip", health_tip_path(tip)  %>
+                    </div>
+                <% end %>
+            </div>
+            <div class="col-2">
+                <h2>Tips to Gain Weight</h2>
+                <% @gain_weight_tips.each do |tip| %>
+                <div class="tip-container">
+                    <h3><%= tip.title %></h3>
+                    <%= link_to "See Health Tip", health_tip_path(tip)  %>
+                </div>
+                <% end %>
+            </div>
+        </div>
     
 </div>
+<!---->
