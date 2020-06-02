@@ -5,11 +5,16 @@ class CommentsController < ApplicationController
     def create
         if params[:health_tip_id]
             comment = Comment.create(comment_params)
-            redirect_to health_tip_path(comment.health_tip)
+            redirect_to health_tip_comments_path(comment.health_tip)
         else
             flash[:alert] = "You should not have been able to submit a comment without a health_tip_id."
             render :'health_tips/show'
         end
+    end
+
+    def index
+        @health_tip = HealthTip.find(params[:health_tip_id])
+        @comments = @health_tip.comments
     end
 
 

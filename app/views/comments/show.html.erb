@@ -1,21 +1,22 @@
 <div class="container text-center">
     <h2><%= @comment.health_tip_title %></h2>
-    <div class="comment-container">
+    <div>
         <h3>Name: <%= @comment.name_of_user %></h3>
         <p>Comment: <%= @comment.content %></p>
     </div>
-    <div class="reply-container">
+    <div class="floating-container-blue">
         <h4>Replies:</h4>
         <% @comment.replies.each do |reply| %>
-        <div class="reply">
+        <div class="floating-container-grey">
             <h4><%= reply.name_of_user %></h4>
             <p><%= reply.content %></p>
         </div>
         <% end %>
-            <div class="container">
-            <h4>New Reply:</h4>
-            <%= render 'reply_form' %>
-        </div>
+            
+    </div>
+    <div class="floating-container-blue form" >
+        <h4>New Reply:</h4>
+        <%= render 'reply_form' %>
     </div>
     
 </div>

@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :health_tips
 
   resources :health_tips, only: [:show] do
-    resources :comments, only: [:create]
+    resources :comments, only: [:create, :index]
   end
   resources :comments, only: [:show] do
     resources :replies, only: [:create]

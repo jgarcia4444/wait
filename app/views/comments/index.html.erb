@@ -1,0 +1,19 @@
+
+<div class="container text-center">
+    <h1><%= @health_tip.title %></h1>
+    <div class="floating-container-blue">
+        <h3><%= pluralize(@comments.count, "Comment") %></h3>
+        <% @comments.each do |comment| %>
+        <div class="floating-container-grey">
+            <h4><%= comment.user.name %></h4>
+            <p><%= comment.content %></p>
+            <p><%= pluralize(comment.reply_count, "reply") %></p>
+            <%= link_to "Reply to comment", comment_path(comment) %>
+        </div> 
+        <% end %>
+    </div>
+    <div  class="floating-container-blue form">
+        <%= render 'comment_form' %>
+    </div>
+</div>
+

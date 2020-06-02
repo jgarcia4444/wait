@@ -1,10 +1,9 @@
 /* Layout Styling */
 body {
     margin: 0;
-}
-
-main {
-    margin-top: 10%;
+    /* background-color: #98989C; */
+    background-image: linear-gradient(to bottom, #fff, #98989C);
+    background-image: radial-gradient(#fff, #98989C);
 }
 
 nav>a {
@@ -52,99 +51,6 @@ footer>p {
     padding-left: 2%;
 }
 
-/* Health Tip Show Styling */
-
-.comment-container, .reply-container {
-    width: 70%;
-    margin: 0 auto 5% auto;
-    padding: 3%;
-    background-color:#0e26b1;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #000;
-}
-
-.comment, .reply {
-    background-color: #98989C;
-    color: black;
-    width: 50%;
-    margin: 4% auto;
-    padding: 2%;
-    border-radius: 5px;
-    box-shadow: 0 0 20px #000;
-}
-
-.comment>p>a {
-    color: black;
-    text-decoration: none;
-    padding: 5px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #000;
-}
-
-.comment>p>a:hover {
-    text-decoration: underline;
-    box-shadow: 0 0 10px #000;
-}
-
-.comment>p>a:active {
-    background-color: black;
-    color: white;
-    text-decoration: none;
-}
-
-.health-tip-container {
-    width: 70%;
-    margin: 0 auto 5% auto;
-    padding: 3%;
-}
-
-#health-tip-content {
-    margin-top: 10%;
-    text-align: left;
-}
-/* User Show Page Styling */
-.user-container {
-    width: 70%;
-    margin: 0 auto;
-    padding: 3%;
-    background-color:#0e26b1;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #000;
-}
-
-.user-container>a {
-    color: black;
-    text-decoration: none;
-    padding: 5px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #000;
-}
-
-.user-container>a:hover {
-    text-decoration: underline;
-    box-shadow: 0 0 10px #000;
-}
-
-.user-container>a:active {
-    background-color: black;
-    color: white;
-    text-decoration: none;
-}
-/* Home Styling */
-
-.signup-login-container {
-    width: 70%;
-    margin: 0 auto;
-    padding: 3%;
-    background-color:#0e26b1;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #000;
-}
 
 .col-2 { 
     display: inline-block;
@@ -186,59 +92,6 @@ footer>p {
     text-align: left;
 }
 
-/* Health Tip Index Styling */
-.health-tips-container {
-    width: 70%;
-    margin: 0 auto;
-    padding: 3%;
-    background-color:#0e26b1;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #000;
-}
-
-.tip-container {
-    background-color: #98989C;
-    color: black;
-    width: 50%;
-    margin: 4% auto;
-    padding: 5%;
-    border-radius: 5px;
-    box-shadow: 0 0 20px #000;
-}
-
-.tip-container>a {
-    color: black;
-    text-decoration: none;
-    padding: 5px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #000;
-}
-
-.tip-container>a:hover {
-    text-decoration: underline;
-    box-shadow: 0 0 10px #000;
-}
-
-.tip-container>a:active {
-    background-color: black;
-    color: white;
-    text-decoration: none;
-}
-
-/* New Weight Styling */
-
-.weight-input-container {
-    width: 70%;
-    margin: 0 auto;
-    padding: 3%;
-    background-color:#0e26b1;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #000;
-}
-
 input[type="submit"] {
     color: black;
     text-decoration: none;
@@ -246,29 +99,6 @@ input[type="submit"] {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 5px #000;
-}
-
-/* Login Styling  */
-.login-container {
-    width: 70%;
-    margin: 0 auto;
-    padding: 3%;
-    background-color:#0e26b1;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #000;
-}
-
-/* Signup Styling */
-
-.signup-container {
-    width: 70%;
-    margin: 0 auto;
-    padding: 3%;
-    background-color:#0e26b1;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #000;
 }
 
 .field_with_errors {
@@ -287,4 +117,87 @@ input[type="submit"] {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 5px #000;
+}
+
+.floating-container-blue {
+    width: 70%;
+    height: 70vh;
+    overflow: auto;
+    margin: 10% auto;
+    padding: 3%;
+    background-color:#0e26b1;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    
+}
+
+.floating-container-blue::-webkit-scrollbar {
+    width: 12px;
+}
+
+.floating-container-blue::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,1.0); 
+    border-radius: 10px;
+}
+
+.floating-container-blue::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,1.0); 
+}
+
+.floating-container-blue>a {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+}
+
+.floating-container-blue>a:hover {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+.floating-container-blue>a:active {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+.form {
+    height: auto;
+}
+
+.floating-container-grey {
+    background-color: #98989C;
+    color: black;
+    width: 50%;
+    margin: 4% auto;
+    padding: 5%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #000;
+}
+
+.floating-container-grey>a {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+}
+
+.floating-container-grey>a:hover {
+    text-decoration: underline;
+    box-shadow: 0 0 10px #000;
+}
+
+.floating-container-grey>a:active {
+    background-color: black;
+    color: white;
+    text-decoration: none;
 }
