@@ -5,11 +5,11 @@
             <h3># of Weight entries:</h3>
             <p><%= @user.weight_entries_count %></p>
             <h3>Distance from goal</h3>
-            <p><%= @user.difference_from_goal_weight %></p>
+            <p><%= @user.distance_to_goal %></p>
             <%= link_to "Input weight data.", new_user_weight_path(@user.id) %>
         <% else %>
             <p>In order for the weight tracker to work properly we need some more info from you.</p>
-            <%= link_to "Fill out your info.", "users/#{current_user.id}/info" %>
+            <%= link_to "Fill out your info.", edit_user_path(@user) %>
         <% end %>
         
     </div>

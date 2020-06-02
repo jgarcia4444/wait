@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  resources :users, only: [ :new, :create, :show ]
+  resources :users, only: [ :new, :create, :show, :edit, :update ]
 
   get '/login', :to => "session#new"
   post '/login', :to => "session#create"
   post '/logout', :to => "session#logout"
   get '/auth/:provider/callback', to: 'session#create'
+  get '/users/:id/edit', to: "users#edit"
 
   resources :users, only: [:show] do
     resources :weights, only: [:show, :index, :new, :edit]
