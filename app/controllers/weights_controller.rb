@@ -12,6 +12,7 @@ class WeightsController < ApplicationController
         @weight = Weight.create(weight_params)
         if @weight.valid?
             replace_weight_if_entered_today
+            @message = closer_to_goal
             current_user.update(:weight => params[:weight][:weight_input])
             redirect_to user_path(@weight.user)
         else
