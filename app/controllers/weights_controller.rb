@@ -15,8 +15,12 @@ class WeightsController < ApplicationController
             redirect_to user_path(@weight.user)
         else
             render :new
-        end
-        
+        end   
+    end
+
+    def index
+        @user = User.find(params[:user_id])
+        @weights = @user.weights
     end
 
 

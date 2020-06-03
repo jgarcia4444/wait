@@ -1,12 +1,9 @@
 <div class="container text-center">
+    <h1>Hello <%= @user.name %></h1>
     <div class="floating-container-blue form">
-        <h1>Hello <%= @user.name %></h1>
+        
         <% if @user.goal && @user.weight && @user.height && @user.gender %>
-            <h3># of Weight entries:</h3>
-            <p><%= @user.weight_entries_count %></p>
-            <h3>Distance from goal</h3>
-            <p><%= @user.distance_to_goal %></p>
-            <%= link_to "Input weight data.", new_user_weight_path(@user.id) %>
+            <%= render 'weight_metrics' %>
         <% else %>
             <p>In order for the weight tracker to work properly we need some more info from you.</p>
             <%= link_to "Fill out your info.", edit_user_path(@user) %>

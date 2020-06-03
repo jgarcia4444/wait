@@ -1,0 +1,11 @@
+<div class="container text-center">
+    <h1><%= @user.name %>'s Weights</h1>
+    <div class="floating-container-blue">
+        <ul>
+            <% @weights.each do |weight| %>
+                <li><%= weight.created_at %></li>
+                <li><%= weight.weight_input %></li>
+            <% end %>
+        </ul>
+    </div>
+</div>
