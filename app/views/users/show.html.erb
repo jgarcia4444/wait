@@ -1,5 +1,5 @@
 <div class="container text-center">
-    <h1>Hello <%= @user.name %></h1>
+    <h1><%= time_dependent_greeting %>, <%= @user.name %></h1>
     <div class="floating-container-blue form">
         
         <% if @user.goal && @user.weight && @user.height && @user.gender %>
