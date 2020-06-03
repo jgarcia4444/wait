@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-    helper_method :current_user, :time_dependent_greeting
+    helper_method :current_user, :time_dependent_greeting, :replace_weight_if_entered_today
 
     def current_user
         User.find_by(:id => session[:user_id])
@@ -14,6 +14,14 @@ class ApplicationController < ActionController::Base
             "Good Afternoon"
         else
             "Good Evening"
+        end
+    end
+
+    def replace_weight_if_entered_today
+        new_weight = current_user.weights.last
+        previous_weight = current_user.weights[-2]
+        if new_weight.created_at.day == previous_weight.created_at.day
+            previous_weight.destroy
         end
     end
 
