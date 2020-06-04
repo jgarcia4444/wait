@@ -1,7 +1,7 @@
 <div class="container text-center">
     <h1><%= time_dependent_greeting %>, <%= @user.name %></h1>
         <p><%= closer_to_goal %></p>
-    <div class="floating-container-blue form">
+    <div class="mt-3">
         <% if @user.goal && @user.weight && @user.height && @user.gender %>
             <%= render 'weight_metrics' %>
         <% else %>

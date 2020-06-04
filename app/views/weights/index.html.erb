@@ -1,11 +1,11 @@
 <div class="container text-center">
     <h1><%= @user.name %>'s Weights</h1>
-    <div class="floating-container-blue">
-        <ul>
-            <% @weights.each do |weight| %>
-                <li><%= weight.created_at %></li>
-                <li><%= weight.weight_input %></li>
+    <div class="floating-container-blue form">
+        <div>
+            <% @weights.reverse.each do |weight| %>
+                <p><%= weight.display_date %></p>
+                <p><%= weight.weight_input %></p>
             <% end %>
-        </ul>
+        </div>
     </div>
 </div>

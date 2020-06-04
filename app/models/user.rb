@@ -20,4 +20,12 @@ class User < ApplicationRecord
         self.goal && self.weight ? self.goal - self.weight : nil 
     end
 
+    def average_weight
+        sum = 0
+        self.weights.each do |weight|
+            sum += weight.weight_input
+        end
+        sum / self.weights.count.to_f
+    end
+
 end

@@ -24,4 +24,11 @@
         <h3>B.M.I</h3>
         <p>12.1</p>
     </div>
+    <div class="col-2">
+        <h3>Average Weight:</h3>
+        <p><%= @user.average_weight %></p>
+    </div>
+    <div class="col-2">
+        <%= link_to "Update Profile", edit_user_path(@user) %>
+    </div>
 </div>

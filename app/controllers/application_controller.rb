@@ -25,8 +25,7 @@ class ApplicationController < ActionController::Base
             previous_weight.destroy
         end
     end
-
-
+    
     def closer_to_goal
         new_weight = current_user.weights.last
         previous_weight = current_user.weights[-2]

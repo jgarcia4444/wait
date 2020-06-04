@@ -7,8 +7,27 @@ body {
     font-family: sans-serif;
 }
 
+a {
+    background-color: #0e26b1;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: none;
+    box-shadow: none;
+}
+
 nav>a {
     color: white;
+    background-color: black;
     text-decoration: none;
     margin-left: 5%;
 }
@@ -125,7 +144,7 @@ input[type="submit"] {
     width: 70%;
     height: 70vh;
     overflow: auto;
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 3%;
     background-color:#0e26b1;
     color: white;
@@ -170,6 +189,8 @@ input[type="submit"] {
     text-decoration: none;
 }
 
+
+
 .form {
     height: auto;
 }
@@ -202,4 +223,8 @@ input[type="submit"] {
     background-color: black;
     color: white;
     text-decoration: none;
+}
+
+.mt-3 {
+    margin-top: 3%;
 }
