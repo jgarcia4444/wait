@@ -15,14 +15,14 @@
     </div>
     <div class="col-2">
         <h3>Goal is:</h3>
-        <p><%=pluralize( @user.distance_to_goal, 'pound') %> away</p>
+        <p><%=pluralize(@user.distance_to_goal, 'pound') %> away</p>
     </div>
     <div class="col-2">
         <%= link_to "All Entries", user_weights_path(@user) %>
     </div>
     <div class="col-2">
         <h3>B.M.I</h3>
-        <p>12.1</p>
+        <p><%= @user.body_mass_index %></p>
     </div>
     <div class="col-2">
         <h3>Average Weight:</h3>

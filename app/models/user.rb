@@ -25,7 +25,13 @@ class User < ApplicationRecord
         self.weights.each do |weight|
             sum += weight.weight_input
         end
-        sum / self.weights.count.to_f
+        (sum / self.weights.count.to_f).round(2)
+    end
+
+    def body_mass_index
+        height_in_meters = self.height / 39.37
+        weight_in_kg = self.weight / 2.204
+        (weight_in_kg / height_in_meters ** 2).round(2)
     end
 
 end
