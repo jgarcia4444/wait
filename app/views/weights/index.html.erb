@@ -4,7 +4,8 @@
         <div>
             <% @weights.reverse.each do |weight| %>
                 <p><%= weight.display_date %></p>
-                <p><%= weight.weight_input %></p>
+                <p><%= weight.weight_input %> lbs. <%= link_to 'Delete Entry', weight_path(weight), method: "delete" %></p>
+                
             <% end %>
         </div>
     </div>

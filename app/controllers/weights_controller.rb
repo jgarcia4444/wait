@@ -25,6 +25,13 @@ class WeightsController < ApplicationController
         @weights = @user.weights
     end
 
+    def destroy
+        weight = Weight.find(params[:id])
+        user = weight.user
+        weight.destroy
+        redirect_to user_weights_path(user)
+    end
+
 
     private
         def weight_params

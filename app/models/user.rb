@@ -1,6 +1,6 @@
 class User < ApplicationRecord
     has_secure_password
-    has_many :weights
+    has_many :weights, dependent: :destroy
     has_many :comments
     has_many :replies
     has_many :replies, :through => :comments
@@ -21,11 +21,16 @@ class User < ApplicationRecord
     end
 
     def average_weight
-        sum = 0
-        self.weights.each do |weight|
-            sum += weight.weight_input
+        if self.weight_entries_count > 0
+           sum = 0
+            self.weights.each do |weight|
+                sum += weight.weight_input
+            end
+            (sum / self.weights.count.to_f).round(2) 
+        else
+            self.weight
         end
-        (sum / self.weights.count.to_f).round(2)
+        
     end
 
     def body_mass_index

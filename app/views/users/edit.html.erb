@@ -2,6 +2,7 @@
     <h1>Edit Form</h1>
     <div class="floating-container-blue form">
         <%= render 'form' %>
+        
     </div>
-    
+    <%= link_to "Delete User", user_path(@user), method: 'delete' %>
 </div>
