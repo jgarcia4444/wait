@@ -2,8 +2,8 @@ class User < ApplicationRecord
     has_secure_password
     has_many :weights, dependent: :destroy
     has_many :comments
-    has_many :replies
-    has_many :replies, :through => :comments
+    has_many :replies, dependent: :destroy
+    has_many :replies, :through => :comments, dependent: :destroy
     validates :name, :presence => true
     validates :email, :presence => true
     validates :email, :uniqueness => true

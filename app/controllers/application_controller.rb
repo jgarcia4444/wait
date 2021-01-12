@@ -28,30 +28,34 @@ class ApplicationController < ActionController::Base
         end
         
     end
-    
+
+    def losing_weight?(user)
+        if user.weight > user.goal
+            true
+        end
+        false
+    end
+
     def closer_to_goal
-        if current_user.weight
-            new_weight = current_user.weights.last 
-            previous_weight = current_user.weights[-2]
-            if new_weight
-                @new_difference_from_goal = (current_user.goal - new_weight.weight_input).abs()
+        user = current_user
+        if user.weight && user.weights.count > 1
+            newest_weight = user.weight
+            previous_weight = user.weight[-2]
+            is_losing_weight = losing_weight?(user)
+            if is_losing_weight
+                if newest_weight < previous_weight
+                    "Great job! You are moving closer to your goal. Stay consistent and keep up the good work."
+                else
+                    "It's okay, don't let this dishearten you. Keep focusing on your health and be patient your weight will be where you want it to be in time."
+                end
             else
-                @new_difference_from_goal = (current_user.goal - current_user.weight).abs()
-            end
-            
-            if previous_weight
-                @previous_difference_from_goal = (current_user.goal - previous_weight.weight_input).abs()    
-            else
-                @previous_difference_from_goal = (current_user.goal - current_user.weight).abs()
-            end
-            
-            if @new_difference_from_goal < @previous_difference_from_goal
-                "Great job! You are moving closer to your goal. Stay consistent and keep up the good work."
-            else
-                "It's okay, don't let this dishearten you. Keep focusing on your health and be patient your weight will be where you want it to be in time."
+                if newest_weight > previous_weight
+                    "Great job! You are moving closer to your goal. Stay consistent and keep up the good work."
+                else
+                    "It's okay, don't let this dishearten you. Keep focusing on your health and be patient your weight will be where you want it to be in time."
+                end
             end
         end
-        
     end
 
 end

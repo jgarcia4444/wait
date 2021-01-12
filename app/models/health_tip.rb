@@ -1,7 +1,7 @@
 class HealthTip < ApplicationRecord
     has_many :comments
-    has_many :replies, :through => :comments
-    has_many :users, :through => :comments
+    has_many :replies, :through => :comments, dependent: :destroy
+    has_many :users, :through => :comments, dependent: :destroy
 
     def comments_count
         self.comments.count
