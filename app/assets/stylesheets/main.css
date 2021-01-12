@@ -78,16 +78,16 @@ footer>p {
     margin: 2% auto 2% 0.5%;
 }
 
-.col-2>a {
+.col-2>a, .row>a {
     color: black;
     text-decoration: none;
     padding: 5px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 5px #000;
+    transition: box-shadow 0.33s;
 }
 
-.col-2>a:hover {
+.col-2>a:hover, .row>a:hover {
     background-color: black;
     color: white;
     box-shadow: 0 0 10px #000;
@@ -97,6 +97,7 @@ footer>p {
     background-color: black;
     color: white;
     text-decoration: none;
+    box-shadow: none;
 }
 
 .jumbotron {
